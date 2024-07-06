@@ -1,8 +1,7 @@
 from django.db import models
 
+
 # Create your models here.
-
-
 class Product(models.Model):
     name = models.TextField(max_length=200, verbose_name='nombre')
     description = models.TextField(max_length=300, verbose_name='descripción')
@@ -12,6 +11,5 @@ class Product(models.Model):
     photo = models.ImageField(
         upload_to='logos', null=True, blank=True, verbose_name='foto')
 
-
-def __str__(self):
-    return self.name
+    def __str__(self):
+        return self.name
